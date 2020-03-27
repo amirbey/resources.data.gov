@@ -53,6 +53,7 @@ page_gen:
     dir: resources
     filter: publish
   - data: resources-summary
+    index_files: false
     template: resource-summary
     name: name
     dir: resources
