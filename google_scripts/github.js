@@ -93,10 +93,10 @@ function commitToGithub (filename, content, lastSha) {
 
 // save contents of spreadsheet as csv
 // Adapted from: https://gist.github.com/mrkrndvs/a2c8ff518b16e9188338cb809e06ccf1
-function saveCsv() {
+function saveCsv(sheet_name) {
   // get the active spreadsheet
   var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-  var sheet = spreadsheet.getSheetByName('rdg resource list');
+  var sheet = spreadsheet.getSheetByName(sheet_name);
 
   // variables for export
   var range = sheet.getDataRange();
@@ -141,12 +141,15 @@ function saveCsv() {
 }
 
 function run() {
-  var csv = saveCsv();
-
   getToken();
 
+  var csv = saveCsv('rdg resource list');
   var filename = 'pages/_data/resources.csv';
   var lastSha = (getLastSha(filename));
+  commitToGithub(filename, csv, lastSha);
 
+  csv = saveCsv('rdg summary list');
+  filename = 'pages/_data/resources-summary.csv';
+  lastSha = (getLastSha(filename));
   commitToGithub(filename, csv, lastSha);
 }
