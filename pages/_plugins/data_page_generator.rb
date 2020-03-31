@@ -42,7 +42,6 @@ module Jekyll
       # the value of these variables changes according to whether we
       # want to generate named folders or not
       if name_expr
-        record = data
         raw_filename = eval(name_expr)
         if raw_filename == nil
           puts "error (datapage_gen). name_expr '#{name_expr}' generated an empty value in record #{data}"
@@ -121,9 +120,21 @@ module Jekyll
             records = records.select { |r| r[data_spec['filter']] } if data_spec['filter']
             records = records.select { |record| eval(data_spec['filter_condition']) } if data_spec['filter_condition']
 
+            collection_name = data_spec['data'].gsub('-', '_')
+            collection = Collection.new(site, collection_name)
+
             records.each do |record|
-              site.pages << DataPage.new(site, site.source, index_files_for_this_data, dir, record, name, name_expr, template, extension)
+              page = DataPage.new(site, site.source, index_files_for_this_data, dir, record, name, name_expr, template, extension)
+              site.pages << page
+
+              doc = Document.new(page.dir, collection: collection, site: site)
+              doc.merge_data!('layout' => template)
+              doc.merge_data!(record)
+              collection.docs << doc
             end
+
+            site.collections[collection_name] = collection
+
           else
             puts "error (datapage_gen). could not find template #{template}" if not site.layouts.key? template
           end

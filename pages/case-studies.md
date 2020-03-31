@@ -4,6 +4,29 @@ layout: page
 primary_nav_section: Resources
 ---
 
+<p>
+  <strong>testing1</strong>
+  {{ site.collections }}
+</p>
+
+<p>
+  <strong>resources</strong>
+  <ul>
+    {% for r in site.resources %}
+      <li>{{ r.slug }}</li>
+    {% endfor %}
+  </ul>
+</p>
+
+<p>
+  <strong>resources_summary</strong>
+  <ul>
+    {% for r in site.resources_summary %}
+      <li>{{ r.name }}</li>
+    {% endfor %}
+  </ul>
+</p>
+
 [Business case for open data]({% link case-studies/business-case.md %}).
 
 [U.S. Department of Labor Case Study](https://project-open-data.cio.gov/labor-case-study/).

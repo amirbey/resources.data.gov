@@ -5,7 +5,7 @@ description: >-
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://resources.data.gov
 twitter_username: usdatagov
-github_username:  gsa
+github_username: 18F
 dap_agency: GSA
 searchgov_affiliate: datagov-resources
 
