@@ -97,7 +97,7 @@ collections:
 
     files:
       - label: "Resource summaries"
-        name: "resource summaries"
+        name: "resource-summaries"
         file: "pages/resource-summaries.yml"
 
         fields:
