@@ -1,0 +1,153 @@
+backend:
+  name: github
+  repo: 18F/resources.data.gov
+  base_url: https://federalistapp.18f.gov
+  auth_endpoint: external/auth/github
+  preview_context: federalist/build
+  branch: develop
+  use_graphql: true
+
+publish_mode: editorial_workflow
+show_preview_links: true
+
+media_folder: "pages/assets/media"
+public_folder: "/assets/media"
+
+collections:
+  - name: "resources"
+    preview_path: "resources/{{slug}}"
+    label: "Resources"
+    create: true
+    folder: "pages/_resources/"
+    slug: "{{fields.slug}}"
+    fields:
+      - label: "name"
+        name: "name"
+        widget: "string"
+        hint: "name of the resource"
+        required: true
+
+      - label: "slug"
+        name: "slug"
+        widget: "string"
+        hint: "slug link (part that comes at the very end of a url)"
+        required: true
+
+      - label: "description"
+        name: "description"
+        widget: "text"
+        hint: "description of the resource"
+        required: true
+
+      - label: "source"
+        name: "source"
+        widget: "string"
+        hint: "who created the resource"
+        required: true
+
+      - label: "category"
+        name: "category"
+        widget: "select"
+        hint: "category of the resource"
+        options: ["---", "Data governance & management", "Regulation & compliance", "Hands-on", "Workforce development"]
+        required: true
+
+      - label: "tags"
+        name: "tags"
+        widget: "select"
+        multiple: true
+        hint: "tags for this resource"
+        options: ["---", "open data", "data converter", "data schema", "data standards", "data inventory", "data management", "API", "data analytics", "data visualization", "data validation", "data cleaning", "geospatial", "data governance", "CDO", "PRA", ]
+        required: true
+
+      - label: "format"
+        name: "format"
+        widget: "select"
+        hint: "format of the resource"
+        options: ["---", "Case study", "Software tool", "Standard/schema", "Form/template", "Report", "OMB Memo", "Skill-builder"]
+        required: false
+
+      - label: "link"
+        name: "link to resource"
+        widget: "markdown"
+        hint: "link to the resource"
+        required: false
+
+      - label: "details"
+        name: "details"
+        widget: "markdown"
+        hint: "detailed description of the resource"
+        required: false
+
+      - label: "examples"
+        name: "examples"
+        widget: "markdown"
+        hint: "descriptions of or links to how this resource has been used"
+        required: false
+
+      - label: "layout"
+        name: "layout"
+        widget: "select"
+        options: ["resource"]
+        default: ["resource"]
+        hint: "the layout template to use"
+        required: true
+
+  - name: "summaries"
+    label: "Summaries"
+    create: true
+    folder: "pages/_summaries/"
+    slug: "{{fields.slug}}"
+
+    fields:
+      - label: "slug"
+        name: "slug"
+        widget: "string"
+        hint: "slug link (part that comes at the very end of a url)"
+        required: true
+
+      - label: "name"
+        name: "name"
+        widget: "string"
+        hint: "name of the resource"
+        required: true
+
+      - label: "shortdescription"
+        name: "shortdescription"
+        widget: "text"
+        hint: "short description of the resource"
+        required: true
+
+      - label: "source"
+        name: "source"
+        widget: "string"
+        hint: "who created the resource"
+        required: true
+
+      - label: "category"
+        name: "category"
+        widget: "select"
+        hint: "category of the resource"
+        options: ["---", "Data governance & management", "Regulation & compliance", "Hands-on", "Workforce development"]
+        required: true
+
+      - label: "tags"
+        name: "tags"
+        widget: "select"
+        multiple: true
+        hint: "tags for this resource"
+        options: ["---", "open data", "data converter", "data schema", "data standards", "data inventory", "data management", "API", "data analytics", "data visualization", "data validation", "data cleaning", "geospatial", "data governance", "CDO", "PRA", ]
+        required: true
+
+      - label: "format"
+        name: "format"
+        widget: "select"
+        hint: "format of the resource"
+        options: ["---", "Case study", "Software tool", "Standard/schema", "Form/template", "Report", "OMB Memo", "Skill-builder"]
+        required: false
+
+      - label: "link"
+        name: "link to resource"
+        widget: "markdown"
+        hint: "link to the resource"
+        required: true
