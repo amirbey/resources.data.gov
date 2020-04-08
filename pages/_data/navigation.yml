@@ -1,22 +1,22 @@
 - text: Resources
   children:
-    - text: List
-      url: /resource-list
-    - text: Data governance & management
-      url: /governance-management/
-    - text: Regualation & compliance
-      url: /reg-compliance/
-    - text: Hands-on data work
+    - text: Policy
+      url: /policy/
+    - text: Data management and governance 
+      url: /data-management-governance/
+    - text: Data tools
       url: /hands-on/
-    - text: Workforce development
-      url: /workforce-development/
+    - text: Skills development
+      url: /skills-development/
+    - text: Case studies and examples
+      url: /case-studies-examples/
 - text: Communities
   url: /communities/
 - text: About
   children:
     - text: History
       url: /history/
-    - text: Requirements
-      url: /requirements/
     - text: Governance
       url: /governance/
+    - text: Contributing
+      url: /contributing/
