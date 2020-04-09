@@ -4,8 +4,8 @@
       url: /resource-list
     - text: Strategy
       url: /strategy
-    - text: Open Data Communities
-      url: /open-data-communities
+    - text: Communities
+      url: /communities
 - text: Resources
   children:
     - text: Data governance and management
