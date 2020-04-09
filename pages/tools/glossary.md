@@ -61,10 +61,11 @@ Information system life cycle, as defined in OMB Circular A-130, means the phase
 ## JSON
 JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate. It is based on a subset of the JavaScript Programming Language, Standard ECMA-262 3rd Edition - December 1999. JSON is a text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others. These properties make JSON an ideal data-interchange language. -[source](https://searchwindevelopment.techtarget.com/definition/JSON-Javascript-Object-Notation)
 
-__[CONSIDER CHANGING source to](https://json.org) and removing from Tools-->Agency data inventories section__
+__[CONSIDER CHANGING source to https://json.org](https://json.org) and removing from Tools-->Agency data inventories section__
 
 ## JSONP
 JSONP or “JSON with padding” is a JSON extension wherein the name of a callback function is specified as an input argument of the underlying JSON call itself. JSONP makes use of runtime script tag injection.
+
 ## Machine Readable File
 Refers to information or data that is in a format that can be easily processed by a computer without human intervention while ensuring no semantic meaning is lost. -[source](https://csrc.nist.gov/glossary/term/Machine_Readable)
 ## Metadata
@@ -82,7 +83,7 @@ A special kind of variable, used in a subroutine to refer to one of the pieces o
 ## RDF
 Resource Description Framework - A family of specifications for a metadata model. The RDF family of specifications is maintained by the World Wide Web Consortium (W3C). The RDF metadata model is based upon the idea of making statements about resources in the form of a subject-predicate-object expression…and is a major component in what is proposed by the W3C’s Semantic Web activity: an evolutionary stage of the World Wide Web in which automated software can store, exchange, and utilize metadata about the vast resources of the Web, in turn enabling users to deal with those resources with greater efficiency and certainty. RDF’s simple data model and ability to model disparate, abstract concepts has also led to its increasing use in knowledge management applications unrelated to Semantic Web activity. -[source](https://searchapparchitecture.techtarget.com/definition/Resource-Description-Framework-RDF)
 
-##RDFa Lite
+### RDFa Lite
 __Link added/moved from Models->Standards->Resources. Needs a good description written to distinguish from "RDF" above.__
 -[source](https://www.w3.org/TR/rdfa-lite/)
 
