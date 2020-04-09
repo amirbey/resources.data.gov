@@ -2,7 +2,7 @@
   children:
     - text: Resources (testing page)
       url: /resource-list
-    - text: Strategy
+    - text: Policy
       url: /strategy
     - text: Communities
       url: /communities
@@ -18,6 +18,8 @@
       url: /resources/data-tools
     - text: Case studies and examples
       url: /resources/case-studies-and-examples
+    - text: Glossary of terms
+      url: /tools/glossary
 - text: Communities
   url: /communities/
 - text: About
