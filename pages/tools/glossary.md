@@ -63,6 +63,10 @@ JSON (JavaScript Object Notation) is a lightweight data-interchange format. It i
 
 __[CONSIDER CHANGING source to https://json.org](https://json.org) and removing from Tools-->Agency data inventories section__
 
+## JSON-LD
+JSON Based Serialization for Linked Data. __THIS NEEDS A DESCRIPTION EDIT!!!__
+-[source](https://www.w3.org/TR/json-ld/)
+
 ## JSONP
 JSONP or “JSON with padding” is a JSON extension wherein the name of a callback function is specified as an input argument of the underlying JSON call itself. JSONP makes use of runtime script tag injection.
 
