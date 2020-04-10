@@ -29,7 +29,7 @@ secondary_nav:
   text: Executive Order 13642 of May 9, 2013 Making Open and Machine Readable the New Default for Government Information
 
 - url: https://project-open-data.cio.gov/implementation-guide/
-  text: Supplemental Guidance on the Implementation of M-13-13 “Open Data Policy – Managing Information as an Asset”
+  text: Supplemental Guidance on the Implementation of M-13-13 “Open Data Policy – Managing Information as an Asset” (duplicate?)
 
 
 ---
